@@ -49,12 +49,12 @@ class MovieController extends Controller
     public function store(MovieRequest $request)
     {
         try {
-            $movie = Movie::create([
-                'title'         => $request->title,
-                'description'   => $request->description,
-                'rating'        => $request->rating,
-                'image'         => $request->file('image')->store('images'),
-            ]);
+
+            $data = $request->all();
+            if($request->file('image') != null){
+                $data['image'] = $request->file('image')->store('images');
+            }
+            $movie = Movie::create($data);
 
             return $this->responseJson([
                 'message'   => 'Movie successfully added',
@@ -100,7 +100,13 @@ class MovieController extends Controller
     public function destroy($id)
     {
         try {
-            Movie::findOrFail($id)->delete();
+            $movie = Movie::findOrFail($id);
+            // Delete Old image
+            $pathFoto =  $movie->image;
+            if ($pathFoto != null || $pathFoto != '') {
+                Storage::delete($pathFoto);
+            }
+            $movie->delete();
 
             return $this->responseJson([
                 'message' => 'Movie successfully deleted'
