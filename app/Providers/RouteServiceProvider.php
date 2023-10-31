@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Traits\HasResponseJson;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -11,7 +10,6 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    use HasResponseJson;
     /**
      * The path to your application's "home" route.
      *
