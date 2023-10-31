@@ -1,0 +1,1269 @@
+{
+	"info": {
+		"_postman_id": "ebdb4194-06ea-4062-a3d3-e89895a668dc",
+		"name": "Assesment Test Xsis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10765773"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "List of Movie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies?offset=0&sort=DESC&limit=100",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"description": "description & image = nullable",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "DESC"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies?offset=0&sort=DESC&limit=100",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": "",
+											"description": "description & image = nullable",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "sort",
+											"value": "DESC"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 15:41:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 15:41:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IlFMSEFjTGR0MkRvMkM0V0MxRE5kcVE9PSIsInZhbHVlIjoiU3VqQVo5VHBtWmdKbTFBbU51MUJNc3dSeHJxbWdteDkyQ0pMWDMyY1FJa1h5cUh6azUrMGk1ZHNjUENKMTQ5ZjBDc2FIVlMwOVFoYzZRVmdzODBhS2I4RGZlSFRjVitmZ0RDVnJBNXMrT3F3K0pJclhlcm1sRHRzV3gydkRZQmkiLCJtYWMiOiJmNjlhMjExMjQyNjU4ZGMwZmVjYTE5MGU1MjQ0OWFiNjEwMWVhZjZhNzBiM2U4ZTk0MWIzMjBhNmE3MjY4NDI4IiwidGFnIjoiIn0%3D; expires=Mon, 30 Oct 2023 17:41:42 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "movie_session=eyJpdiI6IjJ2S0lzN3BmUHVKMDFtNyt0bnF2aVE9PSIsInZhbHVlIjoiR0Z0VWt2OWZtYzBxdlgxTEQrM054QVJZWVVZZE5qMFI1cDZDSHNuZHZhZ3VhemIweWNQRDl6aTlKbkgyRFFFbHg0ZHJkcWN0NVFJWHgxWU1LNG9qQkxacEdaQytGcUZTekxVY1lCa252SC9qeEFZdk9OV2Y5THpyZEhhUkduMlMiLCJtYWMiOiIwZTUxMTRhN2VkZjZkMzAyNTlmNGE0ZTAzNTRmMmEyYjM5OTZkMmEwYWMyM2ZjYWU5ZmNkZjUzZjM0MjUxZDdlIiwidGFnIjoiIn0%3D; expires=Mon, 30 Oct 2023 17:41:42 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OK.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Pengabdi Setan 2 Comunion\",\n            \"description\": \"dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\n            \"rating\": 7,\n            \"image\": null,\n            \"created_at\": \"2023-10-30T14:21:18.000000Z\",\n            \"updated_at\": \"2023-10-30T14:21:18.000000Z\"\n        }\n    ],\n    \"meta\": {\n        \"limit\": 100,\n        \"offset\": 0,\n        \"filtered_total\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail of Movie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								":id"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null,
+									"description": "description & image = nullable",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "id movie"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/movies/:id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"movies",
+										":id"
+									],
+									"query": [
+										{
+											"key": null,
+											"value": null,
+											"description": "description & image = nullable",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "id movie"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 15:48:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 15:48:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "XSRF-TOKEN=eyJpdiI6IkFabXgwNGt1Z2VrOGxPbWVPTWcwMWc9PSIsInZhbHVlIjoiV1dVMElPL0lUZnBRS3NYMjR0MkdrSzk2ODdyU3BCU3lVYXpURUx3czY2K3Nqa041RTFqYXo5WHZxMHdtSDJKSHd6RE5PTkZIWm8yZE1jM2RHVk1MakVFMC85N0l5U202cEVGZ3JhZ3hFYUlhWGNLQUZSNUdqNlJlTG93bVhHeS8iLCJtYWMiOiJkNzU0OGMwYmFiZWNhNGY1NTdjMDM2ZmU5YTIzOTRlNmJiYzdlZWVmYTMxOGVmYTAzMDRjOWIwMTNlMDk0ZGFlIiwidGFnIjoiIn0%3D; expires=Mon, 30 Oct 2023 17:48:47 GMT; Max-Age=7200; path=/; samesite=lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "movie_session=eyJpdiI6Im05N1lWODV5RGdtRXFLa0NOa0pOQlE9PSIsInZhbHVlIjoiVEtaRkpEeWx2UVVYRmpGMStXZkQwaTZTUFcvd2VQMG1TTzR5SExXNHUrWlNINnpTV0d0YXpIYlBiV0ozdEJRZTVuRFZtV2tpU3NoWmpqL1FWVk85aXJKTmhpVnpOWnRMaXl2UjNkbWhOclZQTVhHNGJSZ0J0VGlTaFVEb2d6ZFEiLCJtYWMiOiIzYjJlZDhiNzdmZjcwY2RiOWUwODcxMTM5NTIxZDQ0ODVmZjk2ZGYxZjJjZTJmNGVkMjAxYjkyMTYwY2NmN2E3IiwidGFnIjoiIn0%3D; expires=Mon, 30 Oct 2023 17:48:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OK.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Pengabdi Setan 2 Comunion\",\n            \"description\": \"dalah sebuah film horor Indonesia tahun 2022 yang disutradarai dan ditulis oleh Joko Anwar sebagai sekuel dari film tahun 2017, Pengabdi Setan.\",\n            \"rating\": 7,\n            \"image\": null,\n            \"created_at\": \"2023-10-30T14:21:18.000000Z\",\n            \"updated_at\": \"2023-10-30T14:21:18.000000Z\"\n        }\n    ],\n    \"meta\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Movie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tes Title 1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tes Description 1",
+									"description": "nullable",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "7",
+									"description": "required, numeric",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "nullable",
+									"type": "file",
+									"src": "/C:/Users/lenov/Pictures/planter-bag.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Tes Title 1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes Description 1",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "7",
+											"description": "required, numeric",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "nullable",
+											"type": "file",
+											"src": "/C:/Users/lenov/Pictures/TNYK lgo1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:08:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:08:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie successfully added\",\n    \"data\": {\n        \"title\": \"Tes Title 1\",\n        \"description\": \"Tes Description 1\",\n        \"rating\": \"7\",\n        \"image\": \"images/JHRjuhxww3SXyFxLadNvEs2WDj3uFlcKCnyZC8TQ.png\",\n        \"updated_at\": \"2023-10-30T16:08:06.000000Z\",\n        \"created_at\": \"2023-10-30T16:08:06.000000Z\",\n        \"id\": 2\n    },\n    \"meta\": []\n}"
+						},
+						{
+							"name": "422 Ratings Must Be Filled",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Tes Title 1",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes Description 1",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "",
+											"description": "required, numeric",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "nullable",
+											"type": "file",
+											"src": "/C:/Users/lenov/Pictures/TNYK lgo1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:10:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:10:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Ratings Must Be Filled.\",\n    \"errors\": {\n        \"rating\": [\n            \"Ratings Must Be Filled.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "422 Title Must Be Filled",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes Description 1",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "7",
+											"description": "required, numeric",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "nullable",
+											"type": "file",
+											"src": "/C:/Users/lenov/Pictures/TNYK lgo1.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:10:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 16:10:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Titles Must Be Filled.\",\n    \"errors\": {\n        \"title\": [\n            \"Titles Must Be Filled.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movie with x-www-form-urlencoded no image",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Tes Title 2",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tes Description 2",
+									"description": "nullable",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "8",
+									"description": "required, numeric",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "id movie"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "multipart/form-data",
+										"type": "text"
+									},
+									{
+										"key": "Content",
+										"value": "multipart/form-data",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Tes Title 2",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes Description 2",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "8",
+											"description": "required, numeric",
+											"type": "text"
+										},
+										{
+											"key": "images",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/:id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2",
+											"description": "id movie"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 22:47:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 22:47:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Tes Title 2\",\n        \"description\": \"Tes Description 2\",\n        \"rating\": \"8\",\n        \"image\": \"images/JHRjuhxww3SXyFxLadNvEs2WDj3uFlcKCnyZC8TQ.png\",\n        \"created_at\": \"2023-10-30T16:08:06.000000Z\",\n        \"updated_at\": \"2023-10-30T22:41:17.000000Z\"\n    },\n    \"meta\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Movie with Form-Data",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tes Title 3",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tes Description 3",
+									"description": "nullable",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "9",
+									"description": "required, numeric",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "nullable",
+									"type": "file",
+									"src": "/C:/Users/lenov/Pictures/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-130-1149253785.png"
+								},
+								{
+									"key": "_method",
+									"value": "PATCH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "id movie"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "multipart/form-data",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content",
+										"value": "multipart/form-data",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Tes Title 3",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes Description 3",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "9",
+											"description": "required, numeric",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "nullable",
+											"type": "file",
+											"src": "/C:/Users/lenov/Pictures/Cool-Black-And-White-Wallpapers-Resolution-1920x1080-Desktop-Backgrounds-130-1149253785.png"
+										},
+										{
+											"key": "_method",
+											"value": "PATCH",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/:id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2",
+											"description": "id movie"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 23:13:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 23:13:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Tes Title 3\",\n        \"description\": \"Tes Description 3\",\n        \"rating\": \"9\",\n        \"image\": \"images/i19KleavAdRVeH84tdS6wuE6rq3R3I63nyBq4P2S.jpg\",\n        \"created_at\": \"2023-10-30T16:08:06.000000Z\",\n        \"updated_at\": \"2023-10-30T23:13:08.000000Z\"\n    },\n    \"meta\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Movie",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movies/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "id movie"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "multipart/form-data",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content",
+										"value": "multipart/form-data",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/movies/:id",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2",
+											"description": "id movie"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 23:20:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Oct 2023 23:20:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.11"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movie successfully deleted\",\n    \"data\": [],\n    \"meta\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
